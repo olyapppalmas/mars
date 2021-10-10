@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mars/business_logic/global_services/style_management/size_reference.dart';
 import 'package:mars/interface/interface_models/single_elements/buttons/tertiary_button.dart';
+import 'package:mars/interface/pages/home/home_page.dart';
 import 'package:mars/interface/style_guide/device_constants.dart';
 import 'package:mars/interface/style_guide/image_urls.dart';
 import 'package:mars/interface/interface_models/type/type_models.dart';
@@ -39,7 +40,21 @@ class _WelcomePageState extends State<WelcomePage> {
               typeHeading2(context, 'Welcome back,'),
               typeHeading2(context, 'Commander!'),
               space(context, 16),
-              tertiaryButton(context, true, 'Start', () {})
+              InkWell(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                    ModalRoute.withName("/Home"),
+                  );
+                },
+                child: tertiaryButton(
+                  context,
+                  true,
+                  'Start',
+                  () {},
+                ),
+              )
             ],
           ),
         ),

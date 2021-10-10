@@ -4,9 +4,9 @@ import 'package:mars/business_logic/services/earth/commands/commands_provider.da
 import 'package:mars/business_logic/services/mars/mars_panel/mars_panel_provider.dart';
 import 'package:mars/business_logic/services/mars/scents/scents_provider.dart';
 import 'package:mars/business_logic/services/mars/robots/robots_provider.dart';
+import 'package:mars/interface/pages/home/welcome_page.dart';
 import 'package:mars/interface/style_guide/colors_guide.dart';
 import 'package:provider/provider.dart';
-import 'interface/pages/home/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
             cursorColor: NEUTRAL_BLACK,
           ),
         ),
-        home: HomePage(),
+        home: WelcomePage(),
       ),
     );
   }
